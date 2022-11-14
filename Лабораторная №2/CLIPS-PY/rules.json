@@ -1,0 +1,525 @@
+[
+    {
+      "name": "ask-peripherals",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["peripherals", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "peripherals",
+                              {"method" : "yesOrNo", "arguments" : "Периферия работает?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-shutdown",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["shutdown", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "shutdown",
+                              {"method" : "yesOrNo", "arguments" : "ПК самопроизвольно выключается?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-beep",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["beep", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "beep",
+                              {"method" : "yesOrNo", "arguments" : "При включении слышен короткий звуковой сигнал?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-loadOS",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["loadOS", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "loadOS",
+                              {"method" : "yesOrNo", "arguments" : "ОС загружается?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-turnON",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["turnON", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "turnON",
+                              {"method" : "yesOrNo", "arguments" : "ПК включается?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-artifacts",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["artifacts", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "artifacts",
+                              {"method" : "yesOrNo", "arguments" : "На экране появляются артифакты?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-load",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["load", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "reboot",
+                              {"method" : "yesOrNo", "arguments" : "ПК произвольно перезагружается?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-burnSmell",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["burnSmell", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "burnSmell",
+                              {"method" : "yesOrNo", "arguments" : "Чувствуется запах гари?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-picture",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["picture", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "picture",
+                              {"method" : "yesOrNo", "arguments" : "Есть изображение на мониторе?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-temp",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["temp", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "temp",
+                              {"method" : "askValue", "arguments" : "Какая температура процессора?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-bsod",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["bsod", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "bsod",
+                              {"method" : "yesOrNo", "arguments" : "Появляется синий экран смерти?"}
+                  ]
+      }
+    },
+    {
+      "name": "ask-lags",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["solution", 0]},
+                              {"method" : "compare", "arguments" : ["lags", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                              "lags",
+                              {"method" : "yesOrNo", "arguments" : "ПК лагает?"}
+                  ]
+      }
+    },
+
+
+
+
+
+    {
+      "name": "rule-errorBIOS",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["peripherals", "no"]},
+                              {"method" : "compare", "arguments" : ["shutdown", "yes"]},
+                              {"method" : "compare", "arguments" : ["beep", "no"]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+        "method" : "and",
+        "arguments" : [
+                    {"method" : "setValue", "arguments" : ["errorBIOS", "yes"]},
+                    {"method" : "print", "arguments" : "Вероятнее всего, у вас слетели настройки BIOS"}
+        ]
+      }
+    },
+    {
+      "name": "rule-southBridge",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" :  "or", "arguments": [
+                                          {"method" : "compare", "arguments" : ["turnON", "yes"]},
+                                          {"method" : "compare", "arguments" : ["artifacts", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+        ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "setValue", "arguments" : ["southBridge", "yes"]},
+                              {"method" : "print", "arguments" : "Вероятнее всего, у вас проблемы с южным мостом"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-northBridge",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments": [
+                                          {"method" : "compare", "arguments" : ["reboot", "yes"]},
+                                          {"method" : "compare", "arguments" : ["shutdown", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["northBridge", "yes"]},
+                                {"method" : "print", "arguments" : "Вероятнее всего, у вас проблемы с северным мостом"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-overheat",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments": [
+                                          {"method" : "and", "arguments": [
+                                                      {"method" : "compare", "arguments" : ["burnSmell", "yes"]},
+                                                      {"method" : "compare", "arguments" : ["picture", "no"]}
+                                          ]},
+                                          {"method" : "biggest", "arguments" : ["temp", "90"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["overheat", "yes"]},
+                                {"method" : "print", "arguments" : "Вероятнее всего, у вас перегрев"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-legs",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["picture", "yes"]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "setValue", "arguments" : ["legs", "yes"]},
+                              {"method" : "print", "arguments" : "Вероятнее всего, у вас погнуты ножки"}
+                  ]
+      }
+    },
+
+
+
+
+
+    {
+      "name": "rule-bios",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments" : [
+                                          {"method" : "compare", "arguments" : ["errorBIOS", "yes"]},
+                                          {"method" : "compare", "arguments" : ["loadOS", "no"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["bios", "yes"]},
+                                {"method" : "print", "arguments" : "Верятнее всего, проблема в BIOS"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-pb",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["turnON", "yes"]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "setValue", "arguments" : ["pb", "yes"]},
+                              {"method" : "print", "arguments" : "Верятнее всего, проблема с блоком питания"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-mb",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments" : [
+                                          {"method" : "compare", "arguments" : ["southBridge", "yes"]},
+                                          {"method" : "compare", "arguments" : ["northBridge", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "setValue",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["mb", "yes"]},
+                                {"method" : "print", "arguments" : "Верятнее всего, проблема с материнской платой"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-cpu",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments" : [
+                                          {"method" : "compare", "arguments" : ["overheat", "yes"]},
+                                          {"method" : "compare", "arguments" : ["legs", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+        "method" : "and",
+        "arguments" : [
+            {"method" : "setValue", "arguments" : ["cpu", "yes"]},
+            {"method" : "print", "arguments" : "Верятнее всего, проблема с процессором"}
+        ]
+      }
+    },
+    {
+      "name": "rule-gpu",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["picture", "yes"]},
+                              {"method" : "compare", "arguments" : ["bsod", "yes"]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "setValue", "arguments" : ["gpu", "yes"]},
+                              {"method" : "print", "arguments" : "Верятнее всего, проблема с видеокартой"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-ram",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["bsod", "no"]},
+                              {"method" : "compare", "arguments" : ["loadOS", "no"]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "setValue", "arguments" : ["rem", "yes"]},
+                              {"method" : "print", "arguments" : "Верятнее всего, проблема с оперативной памятью"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-hdd",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments" : [
+                                          {"method" : "compare", "arguments" : ["lags", "yes"]},
+                                          {"method" : "compare", "arguments" : ["reboot", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "setValue", "arguments" : ["hdd", "yes"]},
+                              {"method" : "print", "arguments" : "Верятнее всего, проблема с жётким диском"}
+                  ]
+      }
+    },
+
+
+
+
+
+    {
+      "name": "rule-idk",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "compare", "arguments" : ["bios", "yes"]},
+                              {"method" : "compare", "arguments" : ["pb", "yes"]},
+                              {"method" : "compare", "arguments" : ["mb", "yes"]},
+                              {"method" : "compare", "arguments" : ["cpu", "yes"]},
+                              {"method" : "compare", "arguments" : ["gpu", "yes"]},
+                              {"method" : "compare", "arguments" : ["ram", "yes"]},
+                              {"method" : "compare", "arguments" : ["ndd", "yes"]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["solution", 1]},
+                                {"method" : "print", "arguments" : "Верятнее всего, у вас слижком глубокая проблема. Отнесите в сервис"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-self",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments": [
+                                          {"method" : "or", "arguments": [
+                                                        {"method" : "compare", "arguments" : ["bios", "yes"]},
+                                                        {"method" : "compare", "arguments" : ["hdd", "yes"]}
+                                          ]},
+                                          {"method" : "compare", "arguments" : ["ram", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["solution", 1]},
+                                {"method" : "print", "arguments" : "Побробуйте починить самостоятельно"}
+                  ]
+      }
+    },
+    {
+      "name": "rule-buy",
+      "condition" : {
+                  "method" : "and",
+                  "arguments" : [
+                              {"method" : "or", "arguments": [
+                                          {"method" : "or", "arguments": [
+                                                      {"method" : "or", "arguments": [
+                                                                  {"method" : "compare", "arguments" : ["pb", "yes"]},
+                                                                  {"method" : "compare", "arguments" : ["cpu", "yes"]}
+                                                      ]},
+                                                      {"method" : "compare", "arguments" : ["mb", "yes"]}
+                                          ]},
+                                          {"method" : "compare", "arguments" : ["gpu", "yes"]}
+                              ]},
+                              {"method" : "compare", "arguments" : ["solution", 0]}
+                  ]
+      },
+      "result" : {
+                  "method" : "and",
+                  "arguments" : [
+                                {"method" : "setValue", "arguments" : ["solution", 1]},
+                                {"method" : "print", "arguments" : "Замените комплектующие"}
+                  ]
+      }
+    }
+]
